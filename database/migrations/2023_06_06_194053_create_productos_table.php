@@ -15,10 +15,11 @@ return new class extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->id('producto');
-            $table->string('nombreproducto', 30);
+            $table->string('nombre', 30);
             $table->decimal('precio', 10, 2);
             $table->text('descripcion');
-            $table->string('imagen', 100);
+            $table->text('categoria');
+            $table->string('imagen', 100)->nullable();
             $table->timestamps();
         });
     }
